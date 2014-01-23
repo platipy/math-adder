@@ -34,3 +34,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# Local sym links
+C:\Users\acbart\Projects\Platipy\math-adder\MathAdder.activity\libraries\spyral\

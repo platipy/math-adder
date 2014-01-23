@@ -1,0 +1,34 @@
+PreTitleScene {
+    background: (255, 255, 255)
+}
+TabletInstructions {
+    image : 'game/images/backgrounds/pretitle.png'
+    anchor : 'center'
+}
+TitleScene {
+    background : 'game/images/backgrounds/title.png'
+    layers: ["bottom", "top"]
+}
+
+MainMenu {
+    layer: "bottom"
+}
+MainMenu.start {
+    font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
+	pos: (0,0)
+}
+
+MainMenu.characters {
+    font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
+    pos: (0, 100)
+}
+
+MainMenu.help {
+    font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
+    pos: (0, 200)
+}
+
+MainMenu.quit {
+    font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
+    pos: (0, 300)
+}
