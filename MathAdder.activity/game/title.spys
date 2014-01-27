@@ -15,20 +15,42 @@ MainMenu {
 }
 MainMenu.start {
     font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
-	pos: (0,0)
+    pos: (0, -25)
+    text: ""
+    image_up: "game/images/forms/start_up.png"
+    image_up_hovered: "game/images/forms/start_up.png"
+    image_up_focused: "game/images/forms/start_up.png"
+    image_down: "game/images/forms/start_down.png"
+    image_down_hovered: "game/images/forms/start_down.png"
+    image_down_focused: "game/images/forms/start_down.png"
+    nine_slice: False
 }
 
 MainMenu.characters {
     font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
-    pos: (0, 100)
+    pos: (0, 175)
+    image_up: "game/images/forms/characters_up.png"
+    image_up_hovered: "game/images/forms/characters_up.png"
+    image_up_focused: "game/images/forms/characters_up.png"
+    image_down: "game/images/forms/characters_down.png"
+    image_down_hovered: "game/images/forms/characters_down.png"
+    image_down_focused: "game/images/forms/characters_down.png"
+    nine_slice: False
 }
 
 MainMenu.help {
     font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
-    pos: (0, 200)
+    pos: (0, 300)
 }
 
 MainMenu.quit {
     font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
-    pos: (0, 300)
+    pos: (0, 350)
+    image_up: "game/images/forms/quit_up.png"
+    image_up_hovered: "game/images/forms/quit_up.png"
+    image_up_focused: "game/images/forms/quit_up.png"
+    image_down: "game/images/forms/quit_down.png"
+    image_down_hovered: "game/images/forms/quit_down.png"
+    image_down_focused: "game/images/forms/quit_down.png"
+    nine_slice: False
 }

@@ -17,6 +17,7 @@ class PreTitleScene(spyral.Scene):
         
         self.register("system.quit", sys.exit)
         self.register("input.keyboard.down.*", self.goto_title)
+        self.register("input.mouse.down.*", self.goto_title)
     
     def goto_title(self):
         spyral.director.replace(TitleScene())
@@ -27,13 +28,15 @@ class TitleScene(spyral.Scene):
         self.load_style("game/title.spys")
 
         class MainMenu(spyral.Form):
-            start = spyral.widgets.Button("Start")
-            characters = spyral.widgets.Button("Characters")
-            help = spyral.widgets.Button("Help")
-            quit = spyral.widgets.Button("Quit")
+            start = spyral.widgets.Button("")
+            characters = spyral.widgets.Button("")
+            quit = spyral.widgets.Button("")
         main_menu = MainMenu(self)
-        main_menu.anchor = 'center'
         main_menu.pos = self.rect.center
+        main_menu.anchor = 'center'
+        main_menu.start.anchor = "center"
+        main_menu.characters.anchor = "center"
+        main_menu.quit.anchor = "center"
         main_menu.focus(main_menu.start)
         
         self.register("system.quit", sys.exit)
