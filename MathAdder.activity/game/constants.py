@@ -2,41 +2,32 @@ from os import path
 
 SIZE = (1200, 900)
 
-colors = {}
-colors['background'] = (222, 152, 254)
-colors['head'] = (255,255,255)
-colors['node'] = (255,255,255)
-colors['bodynode'] = (0,0,0)
-colors['number'] = (255,255,255)
-colors['operator'] = (255,255,255)
-colors['length'] = (0,0,0)
-colors['expression'] = (0,0,0)
-colors['goal'] = (0,0,0)
-colors['pop_up'] = (0,0,0)
-
-colors['menu_start'] = (255,255,255)
-colors['menu_character'] = (231,237,26)
-colors['menu_unlock'] = (231,237,26)
-colors['menu_quit'] = (184,144,21)
-colors['menu_text_hightlight'] = (240,101,50)
-
-colors['character_unlock'] = (231,237,26)
-colors['character_back'] = (184,144,21)
-colors['character_name'] = (255,255,255)
-colors['character_color'] = (0,0,0)
+model = {"snake" : "adder", "color": "0"}
 
 strings = {}
-strings['characters'] = ["< %s >" % _("Adder Adam"),
-                         "< %s >" % _("Sal Amander"),
-                         "< %s >" % _("Darryl Diamondback"),
-                         "< %s >" % _("Colonel Caterpillar")]
-strings['char_sources'] = ["Adder","Anaconda","Diamondback","Caterpillar"]
+strings['names'] = {"adder" : "Adder Adam",
+                    "anaconda" : "Sal Amander",
+                    "diamondback" : "Darryl Diamondback",
+                    "caterpillar" : "Colonel Caterpillar"}
 
 images = {}
 images['background_pretitle'] = path.join('game','images','backgrounds', 'pretitle.png')
 images['background_level'] = path.join('game','images','backgrounds', 'level.png')
 images['background_title'] = path.join('game','images','backgrounds', 'title.png')
 images['background_characters'] = path.join('game','images','backgrounds', 'characters.png')
+snake_images = images["snakes"] = {}
+for snake in strings['names'].iterkeys():
+    snake_images[snake+"_button"] = path.join("game","images","forms",snake+".png")
+    for direction in ("E", "N", "S", "W"):
+        snake_images[snake+"_highlight_"+direction] = path.join("game","images","characters",snake,"60", "Highlight_"+direction+".png")
+    for color in ("0", "1", "2"):
+        snake_images[snake+"_selector_"+color] = path.join("game","images","characters",snake,"CharSelect",color+".png")
+        for direction in ("E", "N", "S", "W"):
+            snake_images[snake+"_body_"+color+direction] = path.join("game","images","characters",snake,"60",color, "Body_"+direction+".png")
+            snake_images[snake+"_head_fine_"+color+direction] = [
+                path.join("game","images","characters",snake,"60",color, "Head_"+direction+str(frame)+".png")
+                    for frame in xrange(0, 6)]
+            snake_images[snake+"_head_dead_"+color+direction] = path.join("game","images","characters",snake,"60",color, "Head_"+direction+"6.png")
 	
 	#images['menu_title'] = spyral.util.load_image(path.join('games/snake/Images/Other', 'menu_title.png'))
 	#images['character_title'] = spyral.util.load_image(path.join('games/snake/Images/Other', 'character_title.png'))

@@ -10,6 +10,10 @@ TitleScene {
     layers: ["bottom", "top"]
 }
 
+CharacterSelect {
+    background : 'game/images/backgrounds/title.png'
+}
+
 MainMenu {
     layer: "bottom"
 }
@@ -18,8 +22,8 @@ MainMenu.start {
     pos: (0, -25)
     text: ""
     image_up: "game/images/forms/start_up.png"
-    image_up_hovered: "game/images/forms/start_up.png"
-    image_up_focused: "game/images/forms/start_up.png"
+    image_up_hovered: "game/images/forms/start_down.png"
+    image_up_focused: "game/images/forms/start_down.png"
     image_down: "game/images/forms/start_down.png"
     image_down_hovered: "game/images/forms/start_down.png"
     image_down_focused: "game/images/forms/start_down.png"
@@ -30,8 +34,8 @@ MainMenu.characters {
     font: ('game/MangaTemple.ttf', 20, (0, 0, 0))
     pos: (0, 175)
     image_up: "game/images/forms/characters_up.png"
-    image_up_hovered: "game/images/forms/characters_up.png"
-    image_up_focused: "game/images/forms/characters_up.png"
+    image_up_hovered: "game/images/forms/characters_down.png"
+    image_up_focused: "game/images/forms/characters_down.png"
     image_down: "game/images/forms/characters_down.png"
     image_down_hovered: "game/images/forms/characters_down.png"
     image_down_focused: "game/images/forms/characters_down.png"
